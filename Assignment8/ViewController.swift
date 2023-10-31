@@ -8,6 +8,19 @@
 import UIKit
 
 class ViewController: UIViewController {
+    private let scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.isScrollEnabled = true
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        return scrollView
+    }()
+    
+    private let contentView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     private let label: UILabel = {
         let label = UILabel()
         label.text = "Sign In"
@@ -150,8 +163,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = .black
         
-        view.addSubview(label)
-        
         // add event handler
         forgotPasswordBtn.addTarget(self, action: #selector(handleForgotPasswordBtnTapped), for: .touchUpInside)
         signUpTextBtn.addTarget(self, action: #selector(handleSignUpBtnTapped), for: .touchUpInside)
@@ -167,15 +178,21 @@ class ViewController: UIViewController {
         
         signUpDescription.addArrangedSubview(signUpTextBtn)
         
-        view.addSubview(emailTextField)
-        view.addSubview(passwordTextField)
-        view.addSubview(signInBtn)
-        view.addSubview(forgotPasswordBtn)
-        view.addSubview(orLabel)
-        view.addSubview(signInWithFacebookBtn)
-        view.addSubview(signInWithGoogleBtn)
-        view.addSubview(signUpDescription)
+//        scrollView.frame = view.bounds
+        contentView.frame = view.bounds
+        scrollView.addSubview(contentView)
+        view.addSubview(scrollView)
         
+        contentView.addSubview(label)
+        contentView.addSubview(emailTextField)
+        contentView.addSubview(passwordTextField)
+        contentView.addSubview(signInBtn)
+        contentView.addSubview(forgotPasswordBtn)
+        contentView.addSubview(orLabel)
+        contentView.addSubview(signInWithFacebookBtn)
+        contentView.addSubview(signInWithGoogleBtn)
+        contentView.addSubview(signUpDescription)
+                
         applyConstraints()
     }
     
@@ -187,66 +204,82 @@ class ViewController: UIViewController {
         button.frame = CGRect(x: 0, y: 0, width: view.frame.width - 50, height: 40)
     }
     
-    private func applyConstraints() {
-        let labelConstraints = [
-            label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            label.topAnchor.constraint(equalTo: view.topAnchor, constant: 50)
+    func applyConstraints() {
+        let scrollViewConstrants = [
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
+            scrollView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ]
         
+        let contentViewConstraints = [
+            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+        ]
+        
+        let labelConstraints = [
+            label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            label.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 50)
+        ]
+
         let emailTextFieldConstraints = [
-            emailTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            emailTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            emailTextField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            emailTextField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
             emailTextField.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 100),
             emailTextField.heightAnchor.constraint(equalToConstant: 40)
         ]
-        
+
         let passwordTextFieldConstraints = [
-            passwordTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            passwordTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            passwordTextField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            passwordTextField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
             passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 20),
             passwordTextField.heightAnchor.constraint(equalToConstant: 40)
         ]
-        
+
         let signInBtnConstraints = [
-            signInBtn.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-            signInBtn.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+            signInBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             signInBtn.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 25),
+            signInBtn.widthAnchor.constraint(equalToConstant: 300),
             signInBtn.heightAnchor.constraint(equalToConstant: 40)
         ]
-        
+
         let forgotPasswordBtnConstraints = [
-            forgotPasswordBtn.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-            forgotPasswordBtn.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+            forgotPasswordBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             forgotPasswordBtn.topAnchor.constraint(equalTo: signInBtn.bottomAnchor, constant: 20),
+            forgotPasswordBtn.widthAnchor.constraint(equalToConstant: 300),
             forgotPasswordBtn.heightAnchor.constraint(equalToConstant: 40)
         ]
-        
+
         let orLabelConstraints = [
             orLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            orLabel.topAnchor.constraint(equalTo: forgotPasswordBtn.bottomAnchor, constant: 40),
+            orLabel.topAnchor.constraint(equalTo: forgotPasswordBtn.bottomAnchor, constant: 30),
             orLabel.heightAnchor.constraint(equalToConstant: 40)
         ]
-        
+
         let signInWithFacebookBtnConstraints = [
-            signInWithFacebookBtn.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-            signInWithFacebookBtn.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+            signInWithFacebookBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             signInWithFacebookBtn.topAnchor.constraint(equalTo: orLabel.bottomAnchor, constant: 30),
+            signInWithFacebookBtn.widthAnchor.constraint(equalToConstant: 300),
             signInWithFacebookBtn.heightAnchor.constraint(equalToConstant: 40)
         ]
-        
+
         let signInWithGoogleBtnConstraints = [
-            signInWithGoogleBtn.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-            signInWithGoogleBtn.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+            signInWithGoogleBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             signInWithGoogleBtn.topAnchor.constraint(equalTo: signInWithFacebookBtn.bottomAnchor, constant: 20),
+            signInWithGoogleBtn.widthAnchor.constraint(equalToConstant: 300),
             signInWithGoogleBtn.heightAnchor.constraint(equalToConstant: 40)
         ]
-        
+
         let signUpDescriptionConstraints = [
-            signUpDescription.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-            signUpDescription.topAnchor.constraint(equalTo: signInWithGoogleBtn.bottomAnchor, constant: 50),
+            signUpDescription.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            signUpDescription.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
             signUpDescription.heightAnchor.constraint(equalToConstant: 40)
         ]
-        
+
+        NSLayoutConstraint.activate(scrollViewConstrants)
+        NSLayoutConstraint.activate(contentViewConstraints)
         NSLayoutConstraint.activate(labelConstraints)
         NSLayoutConstraint.activate(emailTextFieldConstraints)
         NSLayoutConstraint.activate(passwordTextFieldConstraints)
