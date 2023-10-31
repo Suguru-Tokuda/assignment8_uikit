@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB623CB32AF095D6006DAF01 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB623CB22AF095D6006DAF01 /* UIImage.swift */; };
+		BB623CB52AF0A644006DAF01 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB623CB42AF0A644006DAF01 /* UITextField.swift */; };
 		BB8BA61D2AF03BC70080DFCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8BA61C2AF03BC70080DFCC /* AppDelegate.swift */; };
 		BB8BA61F2AF03BC70080DFCC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8BA61E2AF03BC70080DFCC /* SceneDelegate.swift */; };
 		BB8BA6212AF03BC70080DFCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8BA6202AF03BC70080DFCC /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 		BB8BA6342AF03BC80080DFCC /* Assignment8Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8BA6332AF03BC80080DFCC /* Assignment8Tests.swift */; };
 		BB8BA63E2AF03BC80080DFCC /* Assignment8UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8BA63D2AF03BC80080DFCC /* Assignment8UITests.swift */; };
 		BB8BA6402AF03BC80080DFCC /* Assignment8UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8BA63F2AF03BC80080DFCC /* Assignment8UITestsLaunchTests.swift */; };
+		BB8BA64F2AF041150080DFCC /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8BA64E2AF041150080DFCC /* ResetPasswordViewController.swift */; };
+		BB8BA6512AF0414D0080DFCC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8BA6502AF0414D0080DFCC /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB623CB22AF095D6006DAF01 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		BB623CB42AF0A644006DAF01 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		BB8BA6192AF03BC70080DFCC /* Assignment8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8BA61C2AF03BC70080DFCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB8BA61E2AF03BC70080DFCC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +55,8 @@
 		BB8BA6392AF03BC80080DFCC /* Assignment8UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Assignment8UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8BA63D2AF03BC80080DFCC /* Assignment8UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment8UITests.swift; sourceTree = "<group>"; };
 		BB8BA63F2AF03BC80080DFCC /* Assignment8UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment8UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BB8BA64E2AF041150080DFCC /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		BB8BA6502AF0414D0080DFCC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB623CB12AF095C6006DAF01 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BB623CB22AF095D6006DAF01 /* UIImage.swift */,
+				BB623CB42AF0A644006DAF01 /* UITextField.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		BB8BA6102AF03BC70080DFCC = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +116,7 @@
 		BB8BA61B2AF03BC70080DFCC /* Assignment8 */ = {
 			isa = PBXGroup;
 			children = (
+				BB623CB12AF095C6006DAF01 /* Extensions */,
 				BB8BA61C2AF03BC70080DFCC /* AppDelegate.swift */,
 				BB8BA61E2AF03BC70080DFCC /* SceneDelegate.swift */,
 				BB8BA6202AF03BC70080DFCC /* ViewController.swift */,
@@ -106,6 +124,8 @@
 				BB8BA6252AF03BC80080DFCC /* Assets.xcassets */,
 				BB8BA6272AF03BC80080DFCC /* LaunchScreen.storyboard */,
 				BB8BA62A2AF03BC80080DFCC /* Info.plist */,
+				BB8BA64E2AF041150080DFCC /* ResetPasswordViewController.swift */,
+				BB8BA6502AF0414D0080DFCC /* SignUpViewController.swift */,
 			);
 			path = Assignment8;
 			sourceTree = "<group>";
@@ -260,7 +280,11 @@
 			files = (
 				BB8BA6212AF03BC70080DFCC /* ViewController.swift in Sources */,
 				BB8BA61D2AF03BC70080DFCC /* AppDelegate.swift in Sources */,
+				BB623CB52AF0A644006DAF01 /* UITextField.swift in Sources */,
 				BB8BA61F2AF03BC70080DFCC /* SceneDelegate.swift in Sources */,
+				BB623CB32AF095D6006DAF01 /* UIImage.swift in Sources */,
+				BB8BA64F2AF041150080DFCC /* ResetPasswordViewController.swift in Sources */,
+				BB8BA6512AF0414D0080DFCC /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
