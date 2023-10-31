@@ -15,18 +15,30 @@ class ViewController: UIViewController {
         return scrollView
     }()
     
-    private let contentView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
     private let label: UILabel = {
         let label = UILabel()
         label.text = "Sign In"
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 25, weight: .semibold)
         return label
+    }()
+    
+    private let settingBtn: UIButton = {
+        let btn = UIButton()
+        
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.backgroundColor = .clear
+        btn.setTitleColor(.black, for: .normal)
+        btn.tintColor = .gray
+        
+        var config = UIButton.Configuration.filled()
+        
+        let boldConfig = UIImage.SymbolConfiguration(weight: .bold)
+        let boldSearch = UIImage(systemName: "gear", withConfiguration: boldConfig)
+
+        btn.setImage(boldSearch, for: .normal)
+        btn.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
+        return btn
     }()
     
     private var emailTextField: UITextField = {
@@ -166,6 +178,7 @@ class ViewController: UIViewController {
         // add event handler
         forgotPasswordBtn.addTarget(self, action: #selector(handleForgotPasswordBtnTapped), for: .touchUpInside)
         signUpTextBtn.addTarget(self, action: #selector(handleSignUpBtnTapped), for: .touchUpInside)
+        settingBtn.addTarget(self, action: #selector(handleSettingBtnTapped), for: .touchUpInside)
                 
         emailTextField.addBottomLineToTextField(0.0, 40, view.frame.width - 50, 1.0)
         passwordTextField.addBottomLineToTextField(0.0, 40, view.frame.width - 50, 1.0)
@@ -178,20 +191,20 @@ class ViewController: UIViewController {
         
         signUpDescription.addArrangedSubview(signUpTextBtn)
         
-//        scrollView.frame = view.bounds
-        contentView.frame = view.bounds
-        scrollView.addSubview(contentView)
-        view.addSubview(scrollView)
+        scrollView.frame = view.bounds
         
-        contentView.addSubview(label)
-        contentView.addSubview(emailTextField)
-        contentView.addSubview(passwordTextField)
-        contentView.addSubview(signInBtn)
-        contentView.addSubview(forgotPasswordBtn)
-        contentView.addSubview(orLabel)
-        contentView.addSubview(signInWithFacebookBtn)
-        contentView.addSubview(signInWithGoogleBtn)
-        contentView.addSubview(signUpDescription)
+        scrollView.addSubview(label)
+        scrollView.addSubview(settingBtn)
+        scrollView.addSubview(emailTextField)
+        scrollView.addSubview(passwordTextField)
+        scrollView.addSubview(signInBtn)
+        scrollView.addSubview(forgotPasswordBtn)
+        scrollView.addSubview(orLabel)
+        scrollView.addSubview(signInWithFacebookBtn)
+        scrollView.addSubview(signInWithGoogleBtn)
+        scrollView.addSubview(signUpDescription)
+        
+        view.addSubview(scrollView)
                 
         applyConstraints()
     }
@@ -212,28 +225,26 @@ class ViewController: UIViewController {
             scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ]
         
-        let contentViewConstraints = [
-            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+        let settingBtnConstraints = [
+            settingBtn.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 0),
+            settingBtn.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15)
         ]
-        
+
         let labelConstraints = [
-            label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            label.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 50)
+            label.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 20),
+            label.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 0)
         ]
 
         let emailTextFieldConstraints = [
-            emailTextField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            emailTextField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            emailTextField.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 20),
+            emailTextField.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -20),
             emailTextField.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 100),
             emailTextField.heightAnchor.constraint(equalToConstant: 40)
         ]
 
         let passwordTextFieldConstraints = [
-            passwordTextField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            passwordTextField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            passwordTextField.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 20),
+            passwordTextField.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -20),
             passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 20),
             passwordTextField.heightAnchor.constraint(equalToConstant: 40)
         ]
@@ -279,7 +290,7 @@ class ViewController: UIViewController {
         ]
 
         NSLayoutConstraint.activate(scrollViewConstrants)
-        NSLayoutConstraint.activate(contentViewConstraints)
+        NSLayoutConstraint.activate(settingBtnConstraints)
         NSLayoutConstraint.activate(labelConstraints)
         NSLayoutConstraint.activate(emailTextFieldConstraints)
         NSLayoutConstraint.activate(passwordTextFieldConstraints)
@@ -289,6 +300,11 @@ class ViewController: UIViewController {
         NSLayoutConstraint.activate(signInWithFacebookBtnConstraints)
         NSLayoutConstraint.activate(signInWithGoogleBtnConstraints)
         NSLayoutConstraint.activate(signUpDescriptionConstraints)
+    }
+    
+    @objc func handleSettingBtnTapped() {
+        let vc = SettingsViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     @objc func handleForgotPasswordBtnTapped() {

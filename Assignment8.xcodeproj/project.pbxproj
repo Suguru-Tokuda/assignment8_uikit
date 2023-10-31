@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB04CCC22AF16C5F0082D38E /* ResetPasswordConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04CCC12AF16C5F0082D38E /* ResetPasswordConfirmationViewController.swift */; };
+		BB04CCC42AF179870082D38E /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04CCC32AF179860082D38E /* SettingsTableViewController.swift */; };
+		BB04CCC62AF179B10082D38E /* SettingsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04CCC52AF179B10082D38E /* SettingsDetailsViewController.swift */; };
+		BB04CCC92AF17AEE0082D38E /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04CCC82AF17AEE0082D38E /* SettingModel.swift */; };
+		BB04CCCB2AF17D220082D38E /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04CCCA2AF17D220082D38E /* SettingTableViewCell.swift */; };
 		BB623CB32AF095D6006DAF01 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB623CB22AF095D6006DAF01 /* UIImage.swift */; };
 		BB623CB52AF0A644006DAF01 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB623CB42AF0A644006DAF01 /* UITextField.swift */; };
 		BB8BA61D2AF03BC70080DFCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8BA61C2AF03BC70080DFCC /* AppDelegate.swift */; };
@@ -40,6 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB04CCC12AF16C5F0082D38E /* ResetPasswordConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordConfirmationViewController.swift; sourceTree = "<group>"; };
+		BB04CCC32AF179860082D38E /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		BB04CCC52AF179B10082D38E /* SettingsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDetailsViewController.swift; sourceTree = "<group>"; };
+		BB04CCC82AF17AEE0082D38E /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
+		BB04CCCA2AF17D220082D38E /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		BB623CB22AF095D6006DAF01 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		BB623CB42AF0A644006DAF01 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		BB8BA6192AF03BC70080DFCC /* Assignment8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment8.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +94,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB04CCBF2AF16C230082D38E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BB8BA64E2AF041150080DFCC /* ResetPasswordViewController.swift */,
+				BB8BA6502AF0414D0080DFCC /* SignUpViewController.swift */,
+				BB8BA6202AF03BC70080DFCC /* ViewController.swift */,
+				BB04CCC12AF16C5F0082D38E /* ResetPasswordConfirmationViewController.swift */,
+				BB04CCC32AF179860082D38E /* SettingsTableViewController.swift */,
+				BB04CCC52AF179B10082D38E /* SettingsDetailsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BB04CCC02AF16C2B0082D38E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BB04CCCA2AF17D220082D38E /* SettingTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BB04CCC72AF17ADF0082D38E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB04CCC82AF17AEE0082D38E /* SettingModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BB623CB12AF095C6006DAF01 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,16 +155,16 @@
 		BB8BA61B2AF03BC70080DFCC /* Assignment8 */ = {
 			isa = PBXGroup;
 			children = (
+				BB04CCC72AF17ADF0082D38E /* Models */,
+				BB04CCC02AF16C2B0082D38E /* Views */,
+				BB04CCBF2AF16C230082D38E /* Controllers */,
 				BB623CB12AF095C6006DAF01 /* Extensions */,
 				BB8BA61C2AF03BC70080DFCC /* AppDelegate.swift */,
 				BB8BA61E2AF03BC70080DFCC /* SceneDelegate.swift */,
-				BB8BA6202AF03BC70080DFCC /* ViewController.swift */,
 				BB8BA6222AF03BC70080DFCC /* Main.storyboard */,
 				BB8BA6252AF03BC80080DFCC /* Assets.xcassets */,
 				BB8BA6272AF03BC80080DFCC /* LaunchScreen.storyboard */,
 				BB8BA62A2AF03BC80080DFCC /* Info.plist */,
-				BB8BA64E2AF041150080DFCC /* ResetPasswordViewController.swift */,
-				BB8BA6502AF0414D0080DFCC /* SignUpViewController.swift */,
 			);
 			path = Assignment8;
 			sourceTree = "<group>";
@@ -278,13 +317,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB04CCC92AF17AEE0082D38E /* SettingModel.swift in Sources */,
+				BB04CCC62AF179B10082D38E /* SettingsDetailsViewController.swift in Sources */,
 				BB8BA6212AF03BC70080DFCC /* ViewController.swift in Sources */,
 				BB8BA61D2AF03BC70080DFCC /* AppDelegate.swift in Sources */,
 				BB623CB52AF0A644006DAF01 /* UITextField.swift in Sources */,
 				BB8BA61F2AF03BC70080DFCC /* SceneDelegate.swift in Sources */,
+				BB04CCCB2AF17D220082D38E /* SettingTableViewCell.swift in Sources */,
 				BB623CB32AF095D6006DAF01 /* UIImage.swift in Sources */,
 				BB8BA64F2AF041150080DFCC /* ResetPasswordViewController.swift in Sources */,
+				BB04CCC22AF16C5F0082D38E /* ResetPasswordConfirmationViewController.swift in Sources */,
 				BB8BA6512AF0414D0080DFCC /* SignUpViewController.swift in Sources */,
+				BB04CCC42AF179870082D38E /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
