@@ -52,7 +52,7 @@
 		BB04CCCA2AF17D220082D38E /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		BB623CB22AF095D6006DAF01 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		BB623CB42AF0A644006DAF01 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
-		BB8BA6192AF03BC70080DFCC /* Assignment8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment8.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB8BA6192AF03BC70080DFCC /* iOSBootcampUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSBootcampUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8BA61C2AF03BC70080DFCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB8BA61E2AF03BC70080DFCC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BB8BA6202AF03BC70080DFCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,9 +60,9 @@
 		BB8BA6252AF03BC80080DFCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB8BA6282AF03BC80080DFCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB8BA62A2AF03BC80080DFCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BB8BA62F2AF03BC80080DFCC /* Assignment8Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Assignment8Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB8BA62F2AF03BC80080DFCC /* iOSBootcampUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSBootcampUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8BA6332AF03BC80080DFCC /* Assignment8Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment8Tests.swift; sourceTree = "<group>"; };
-		BB8BA6392AF03BC80080DFCC /* Assignment8UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Assignment8UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB8BA6392AF03BC80080DFCC /* iOSBootcampUIKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSBootcampUIKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8BA63D2AF03BC80080DFCC /* Assignment8UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment8UITests.swift; sourceTree = "<group>"; };
 		BB8BA63F2AF03BC80080DFCC /* Assignment8UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment8UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BB8BA64E2AF041150080DFCC /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
@@ -135,9 +135,9 @@
 		BB8BA6102AF03BC70080DFCC = {
 			isa = PBXGroup;
 			children = (
-				BB8BA61B2AF03BC70080DFCC /* Assignment8 */,
-				BB8BA6322AF03BC80080DFCC /* Assignment8Tests */,
-				BB8BA63C2AF03BC80080DFCC /* Assignment8UITests */,
+				BB8BA61B2AF03BC70080DFCC /* iOSBootcampUIKit */,
+				BB8BA6322AF03BC80080DFCC /* iOSBootcampUIKitTests */,
+				BB8BA63C2AF03BC80080DFCC /* iOSBootcampUIKitUITests */,
 				BB8BA61A2AF03BC70080DFCC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -145,14 +145,14 @@
 		BB8BA61A2AF03BC70080DFCC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB8BA6192AF03BC70080DFCC /* Assignment8.app */,
-				BB8BA62F2AF03BC80080DFCC /* Assignment8Tests.xctest */,
-				BB8BA6392AF03BC80080DFCC /* Assignment8UITests.xctest */,
+				BB8BA6192AF03BC70080DFCC /* iOSBootcampUIKit.app */,
+				BB8BA62F2AF03BC80080DFCC /* iOSBootcampUIKitTests.xctest */,
+				BB8BA6392AF03BC80080DFCC /* iOSBootcampUIKitUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BB8BA61B2AF03BC70080DFCC /* Assignment8 */ = {
+		BB8BA61B2AF03BC70080DFCC /* iOSBootcampUIKit */ = {
 			isa = PBXGroup;
 			children = (
 				BB04CCC72AF17ADF0082D38E /* Models */,
@@ -166,32 +166,32 @@
 				BB8BA6272AF03BC80080DFCC /* LaunchScreen.storyboard */,
 				BB8BA62A2AF03BC80080DFCC /* Info.plist */,
 			);
-			path = Assignment8;
+			path = iOSBootcampUIKit;
 			sourceTree = "<group>";
 		};
-		BB8BA6322AF03BC80080DFCC /* Assignment8Tests */ = {
+		BB8BA6322AF03BC80080DFCC /* iOSBootcampUIKitTests */ = {
 			isa = PBXGroup;
 			children = (
 				BB8BA6332AF03BC80080DFCC /* Assignment8Tests.swift */,
 			);
-			path = Assignment8Tests;
+			path = iOSBootcampUIKitTests;
 			sourceTree = "<group>";
 		};
-		BB8BA63C2AF03BC80080DFCC /* Assignment8UITests */ = {
+		BB8BA63C2AF03BC80080DFCC /* iOSBootcampUIKitUITests */ = {
 			isa = PBXGroup;
 			children = (
 				BB8BA63D2AF03BC80080DFCC /* Assignment8UITests.swift */,
 				BB8BA63F2AF03BC80080DFCC /* Assignment8UITestsLaunchTests.swift */,
 			);
-			path = Assignment8UITests;
+			path = iOSBootcampUIKitUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BB8BA6182AF03BC70080DFCC /* Assignment8 */ = {
+		BB8BA6182AF03BC70080DFCC /* iOSBootcampUIKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB8BA6432AF03BC80080DFCC /* Build configuration list for PBXNativeTarget "Assignment8" */;
+			buildConfigurationList = BB8BA6432AF03BC80080DFCC /* Build configuration list for PBXNativeTarget "iOSBootcampUIKit" */;
 			buildPhases = (
 				BB8BA6152AF03BC70080DFCC /* Sources */,
 				BB8BA6162AF03BC70080DFCC /* Frameworks */,
@@ -201,14 +201,14 @@
 			);
 			dependencies = (
 			);
-			name = Assignment8;
+			name = iOSBootcampUIKit;
 			productName = Assignment8;
-			productReference = BB8BA6192AF03BC70080DFCC /* Assignment8.app */;
+			productReference = BB8BA6192AF03BC70080DFCC /* iOSBootcampUIKit.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BB8BA62E2AF03BC80080DFCC /* Assignment8Tests */ = {
+		BB8BA62E2AF03BC80080DFCC /* iOSBootcampUIKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB8BA6462AF03BC80080DFCC /* Build configuration list for PBXNativeTarget "Assignment8Tests" */;
+			buildConfigurationList = BB8BA6462AF03BC80080DFCC /* Build configuration list for PBXNativeTarget "iOSBootcampUIKitTests" */;
 			buildPhases = (
 				BB8BA62B2AF03BC80080DFCC /* Sources */,
 				BB8BA62C2AF03BC80080DFCC /* Frameworks */,
@@ -219,14 +219,14 @@
 			dependencies = (
 				BB8BA6312AF03BC80080DFCC /* PBXTargetDependency */,
 			);
-			name = Assignment8Tests;
+			name = iOSBootcampUIKitTests;
 			productName = Assignment8Tests;
-			productReference = BB8BA62F2AF03BC80080DFCC /* Assignment8Tests.xctest */;
+			productReference = BB8BA62F2AF03BC80080DFCC /* iOSBootcampUIKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BB8BA6382AF03BC80080DFCC /* Assignment8UITests */ = {
+		BB8BA6382AF03BC80080DFCC /* iOSBootcampUIKitUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB8BA6492AF03BC80080DFCC /* Build configuration list for PBXNativeTarget "Assignment8UITests" */;
+			buildConfigurationList = BB8BA6492AF03BC80080DFCC /* Build configuration list for PBXNativeTarget "iOSBootcampUIKitUITests" */;
 			buildPhases = (
 				BB8BA6352AF03BC80080DFCC /* Sources */,
 				BB8BA6362AF03BC80080DFCC /* Frameworks */,
@@ -237,9 +237,9 @@
 			dependencies = (
 				BB8BA63B2AF03BC80080DFCC /* PBXTargetDependency */,
 			);
-			name = Assignment8UITests;
+			name = iOSBootcampUIKitUITests;
 			productName = Assignment8UITests;
-			productReference = BB8BA6392AF03BC80080DFCC /* Assignment8UITests.xctest */;
+			productReference = BB8BA6392AF03BC80080DFCC /* iOSBootcampUIKitUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -265,7 +265,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BB8BA6142AF03BC70080DFCC /* Build configuration list for PBXProject "Assignment8" */;
+			buildConfigurationList = BB8BA6142AF03BC70080DFCC /* Build configuration list for PBXProject "iOSBootcampUIKit" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -278,9 +278,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BB8BA6182AF03BC70080DFCC /* Assignment8 */,
-				BB8BA62E2AF03BC80080DFCC /* Assignment8Tests */,
-				BB8BA6382AF03BC80080DFCC /* Assignment8UITests */,
+				BB8BA6182AF03BC70080DFCC /* iOSBootcampUIKit */,
+				BB8BA62E2AF03BC80080DFCC /* iOSBootcampUIKitTests */,
+				BB8BA6382AF03BC80080DFCC /* iOSBootcampUIKitUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -354,12 +354,12 @@
 /* Begin PBXTargetDependency section */
 		BB8BA6312AF03BC80080DFCC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BB8BA6182AF03BC70080DFCC /* Assignment8 */;
+			target = BB8BA6182AF03BC70080DFCC /* iOSBootcampUIKit */;
 			targetProxy = BB8BA6302AF03BC80080DFCC /* PBXContainerItemProxy */;
 		};
 		BB8BA63B2AF03BC80080DFCC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BB8BA6182AF03BC70080DFCC /* Assignment8 */;
+			target = BB8BA6182AF03BC70080DFCC /* iOSBootcampUIKit */;
 			targetProxy = BB8BA63A2AF03BC80080DFCC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -512,7 +512,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FVEGF5DQ7U;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Assignment8/Info.plist;
+				INFOPLIST_FILE = iOSBootcampUIKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -523,7 +523,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sugurutokuda.Assignment8;
+				PRODUCT_BUNDLE_IDENTIFIER = sugurutokuda.iOSBootcampUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -540,7 +540,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FVEGF5DQ7U;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Assignment8/Info.plist;
+				INFOPLIST_FILE = iOSBootcampUIKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -551,7 +551,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sugurutokuda.Assignment8;
+				PRODUCT_BUNDLE_IDENTIFIER = sugurutokuda.iOSBootcampUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -575,7 +575,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Assignment8.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Assignment8";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSBootcampUIKit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iOSBootcampUIKit";
 			};
 			name = Debug;
 		};
@@ -595,7 +595,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Assignment8.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Assignment8";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSBootcampUIKit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iOSBootcampUIKit";
 			};
 			name = Release;
 		};
@@ -638,7 +638,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BB8BA6142AF03BC70080DFCC /* Build configuration list for PBXProject "Assignment8" */ = {
+		BB8BA6142AF03BC70080DFCC /* Build configuration list for PBXProject "iOSBootcampUIKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB8BA6412AF03BC80080DFCC /* Debug */,
@@ -647,7 +647,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB8BA6432AF03BC80080DFCC /* Build configuration list for PBXNativeTarget "Assignment8" */ = {
+		BB8BA6432AF03BC80080DFCC /* Build configuration list for PBXNativeTarget "iOSBootcampUIKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB8BA6442AF03BC80080DFCC /* Debug */,
@@ -656,7 +656,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB8BA6462AF03BC80080DFCC /* Build configuration list for PBXNativeTarget "Assignment8Tests" */ = {
+		BB8BA6462AF03BC80080DFCC /* Build configuration list for PBXNativeTarget "iOSBootcampUIKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB8BA6472AF03BC80080DFCC /* Debug */,
@@ -665,7 +665,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB8BA6492AF03BC80080DFCC /* Build configuration list for PBXNativeTarget "Assignment8UITests" */ = {
+		BB8BA6492AF03BC80080DFCC /* Build configuration list for PBXNativeTarget "iOSBootcampUIKitUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB8BA64A2AF03BC80080DFCC /* Debug */,
