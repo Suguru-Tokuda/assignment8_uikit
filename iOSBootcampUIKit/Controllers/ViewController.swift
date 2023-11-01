@@ -183,11 +183,8 @@ extension ViewController {
     private func setUpUI() {
         self.navigationController?.navigationBar.tintColor = .black
         
-        // add event handler
-        forgotPasswordBtn.addTarget(self, action: #selector(handleForgotPasswordBtnTapped), for: .touchUpInside)
-        signUpTextBtn.addTarget(self, action: #selector(handleSignUpBtnTapped), for: .touchUpInside)
-        settingBtn.addTarget(self, action: #selector(handleSettingBtnTapped), for: .touchUpInside)
-                
+        addEventHandlers()
+        
         emailTextField.addBottomLineToTextField(0.0, 40, view.frame.width - 50, 1.0)
         passwordTextField.addBottomLineToTextField(0.0, 40, view.frame.width - 50, 1.0)
 
@@ -223,6 +220,17 @@ extension ViewController {
     
     private func setBtnFrame(button: inout UIButton) {
         button.frame = CGRect(x: 0, y: 0, width: view.frame.width - 50, height: 40)
+    }
+}
+
+// MARK: Add event hanlders
+extension ViewController {
+    private func addEventHandlers() {
+        // add event handler
+        signInBtn.addTarget(self, action: #selector(handleSignInBtnTapped), for: .touchUpInside)
+        forgotPasswordBtn.addTarget(self, action: #selector(handleForgotPasswordBtnTapped), for: .touchUpInside)
+        signUpTextBtn.addTarget(self, action: #selector(handleSignUpBtnTapped), for: .touchUpInside)
+        settingBtn.addTarget(self, action: #selector(handleSettingBtnTapped), for: .touchUpInside)
     }
 }
 
@@ -318,6 +326,11 @@ extension ViewController {
 extension ViewController {
     @objc func handleSettingBtnTapped() {
         let vc = SettingsViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func handleSignInBtnTapped() {
+        let vc = MainMenuViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
 

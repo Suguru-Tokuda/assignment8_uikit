@@ -1,0 +1,116 @@
+[
+  {
+    "name": "Ryu",
+    "imageUrl": "https://www.streetfighter.com/6/assets/images/character/ryu/ryu.png",
+    "nationality": "Japan",
+    "pageUrl": "https://www.streetfighter.com/6/character/ryu"
+  },
+  {
+    "name": "Ken",
+    "imageUrl": "https://www.streetfighter.com/6/assets/images/character/ken/ken.png",
+    "nationality": "United States",
+    "pageUrl": "https://www.streetfighter.com/6/character/ken"
+  },
+  {
+    "name": "Guile",
+    "imageUrl": "https://www.streetfighter.com/6/assets/images/character/guile/guile.png",
+    "nationality": "United States",
+    "pageUrl": "https://www.streetfighter.com/6/character/guile"
+  },
+  {
+    "name": "A.K.I",
+    "imageUrl": "https://www.streetfighter.com/6/assets/images/character/aki/aki.png",
+    "nationality": "China",
+    "pageUrl": "https://www.streetfighter.com/6/character/aki"
+  },
+  {
+    "name": "Rashid",
+    "imageUrl": "https://www.streetfighter.com/6/assets/images/character/rashid/rashid.png",
+    "nationality": "United Arab",
+    "pageUrl": "https://www.streetfighter.com/6/character/rashid"
+  },
+  {
+    "name": "Cammy",
+    "imageUrl": "https://www.streetfighter.com/6/assets/images/character/cammy/cammy.png",
+    "nationality": "United Kingdom",
+    "pageUrl": "https://www.streetfighter.com/6/character/cammy"
+  },
+  {
+    "name": "Lily",
+    "imageUrl": "https://www.streetfighter.com/6/assets/images/character/lily/lily.png",
+    "nationality": "Mexico",
+    "pageUrl": "https://www.streetfighter.com/6/character/lily"
+  },
+  {
+    "name": "JP",
+    "imageUrl": "https://www.streetfighter.com/6/assets/images/character/jp/jp.png",
+    "nationality": "Russia",
+    "pageUrl": "https://www.streetfighter.com/6/character/jp"
+  },
+  {
+    "name": "Marisa",
+    "imageUrl": "https://www.streetfighter.com/6/assets/images/character/marisa/marisa.png",
+    "nationality": "Italy",
+    "pageUrl": "https://www.streetfighter.com/6/character/marisa"
+  },
+  {
+    "name": "Zangief",
+    "imageUrl": "https://www.streetfighter.com/6/assets/images/character/zangief/zangief.png",
+    "nationality": "Russia",
+    "pageUrl": "https://www.streetfighter.com/6/character/zangief"
+  },
+  {
+    "name": "Manon",
+    "imageUrl": "https://www.streetfighter.com/6/assets/images/character/manon/manon.png",
+    "nationality": "France",
+    "pageUrl": "https://www.streetfighter.com/6/character/manon"
+  },
+  {
+    "name": "Dee Jay",
+    "imageUrl": "https://www.streetfighter.com/6/assets/images/character/deejay/deejay.png",
+    "nationality": "Jamaica",
+    "pageUrl": "https://www.streetfighter.com/6/character/deejay"
+  },
+  {
+    "name": "E. Honda",
+    "imageUrl": "https://www.streetfighter.com/6/assets/images/character/ehonda/ehonda.png",
+    "nationality": "Japan",
+    "pageUrl": "https://www.streetfighter.com/6/character/ehonda"
+  },
+  {
+    "name": "Dhalsim",
+    "imageUrl": "https://www.streetfighter.com/6/assets/images/character/dhalsim/dhalsim.png",
+    "nationality": "India",
+    "pageUrl": "https://www.streetfighter.com/6/character/dhalsim"
+  },
+  {
+    "name": "Blanka",
+    "imageUrl": "https://www.streetfighter.com/6/assets/images/character/blanka/blanka.png",
+    "nationality": "Brazil",
+    "pageUrl": "https://www.streetfighter.com/6/character/blanka"
+  },
+  {
+    "name": "Juri",
+    "imageUrl": "https://www.streetfighter.com/6/assets/images/character/juri/juri.png",
+    "nationality": "South Korea",
+    "pageUrl": "https://www.streetfighter.com/6/character/juri"
+  },
+  {
+    "name": "Chun-Li",
+    "imageUrl": "https://www.streetfighter.com/6/assets/images/character/chunli/chunli.png",
+    "nationality": "China",
+    "pageUrl": "https://www.streetfighter.com/6/character/chunli"
+  },
+  {
+    "name": "Jamie",
+    "imageUrl": "https://www.streetfighter.com/6/assets/images/character/jamie/jamie.png",
+    "nationality": "Hong Kong",
+    "pageUrl": "https://www.streetfighter.com/6/character/jamie"
+  },
+  {
+    "name": "Luke",
+    "imageUrl": "https://www.streetfighter.com/6/assets/images/character/luke/luke.png",
+    "nationality": "Japan",
+    "pageUrl": "https://www.streetfighter.com/6/character/luke"
+  }
+]

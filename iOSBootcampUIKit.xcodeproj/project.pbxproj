@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB03115B2AF29EFB00EE91B2 /* StreetFighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB03115A2AF29EFB00EE91B2 /* StreetFighter.swift */; };
+		BB03115E2AF29F9A00EE91B2 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB03115D2AF29F9A00EE91B2 /* Country.swift */; };
+		BB0311602AF2A06300EE91B2 /* StreetFighterCharacterCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB03115F2AF2A06300EE91B2 /* StreetFighterCharacterCollectionViewController.swift */; };
+		BB0311692AF2C0A300EE91B2 /* StreetFighterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0311672AF2C0A300EE91B2 /* StreetFighterCollectionViewCell.swift */; };
+		BB03116A2AF2C0A300EE91B2 /* StreetFighterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB0311682AF2C0A300EE91B2 /* StreetFighterCollectionViewCell.xib */; };
+		BB03116C2AF2C11F00EE91B2 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB03116B2AF2C11F00EE91B2 /* UIImageView.swift */; };
+		BB03116E2AF2C65F00EE91B2 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB03116D2AF2C65F00EE91B2 /* MainMenuViewController.swift */; };
+		BB0311702AF2DBD200EE91B2 /* StreetFighterCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB03116F2AF2DBD200EE91B2 /* StreetFighterCollectionHeaderView.swift */; };
+		BB0311722AF2DF0A00EE91B2 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0311712AF2DF0A00EE91B2 /* WebViewController.swift */; };
+		BB0311742AF2E24B00EE91B2 /* userData.json in Resources */ = {isa = PBXBuildFile; fileRef = BB0311732AF2E24B00EE91B2 /* userData.json */; };
+		BB0311762AF2E26100EE91B2 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0311752AF2E26100EE91B2 /* UserDataModel.swift */; };
+		BB0311782AF2E51A00EE91B2 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0311772AF2E51A00EE91B2 /* UserTableViewController.swift */; };
+		BB03117B2AF2E53100EE91B2 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0311792AF2E53100EE91B2 /* UserTableViewCell.swift */; };
+		BB03117C2AF2E53100EE91B2 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB03117A2AF2E53100EE91B2 /* UserTableViewCell.xib */; };
 		BB04CCC22AF16C5F0082D38E /* ResetPasswordConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04CCC12AF16C5F0082D38E /* ResetPasswordConfirmationViewController.swift */; };
 		BB04CCC42AF179870082D38E /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04CCC32AF179860082D38E /* SettingsTableViewController.swift */; };
 		BB04CCC62AF179B10082D38E /* SettingsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04CCC52AF179B10082D38E /* SettingsDetailsViewController.swift */; };
@@ -45,6 +59,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB03115A2AF29EFB00EE91B2 /* StreetFighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetFighter.swift; sourceTree = "<group>"; };
+		BB03115D2AF29F9A00EE91B2 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		BB03115F2AF2A06300EE91B2 /* StreetFighterCharacterCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetFighterCharacterCollectionViewController.swift; sourceTree = "<group>"; };
+		BB0311662AF2AF0400EE91B2 /* fighters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fighters.json; sourceTree = "<group>"; };
+		BB0311672AF2C0A300EE91B2 /* StreetFighterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetFighterCollectionViewCell.swift; sourceTree = "<group>"; };
+		BB0311682AF2C0A300EE91B2 /* StreetFighterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StreetFighterCollectionViewCell.xib; sourceTree = "<group>"; };
+		BB03116B2AF2C11F00EE91B2 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		BB03116D2AF2C65F00EE91B2 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		BB03116F2AF2DBD200EE91B2 /* StreetFighterCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetFighterCollectionHeaderView.swift; sourceTree = "<group>"; };
+		BB0311712AF2DF0A00EE91B2 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		BB0311732AF2E24B00EE91B2 /* userData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = userData.json; sourceTree = "<group>"; };
+		BB0311752AF2E26100EE91B2 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
+		BB0311772AF2E51A00EE91B2 /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
+		BB0311792AF2E53100EE91B2 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		BB03117A2AF2E53100EE91B2 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		BB04CCC12AF16C5F0082D38E /* ResetPasswordConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordConfirmationViewController.swift; sourceTree = "<group>"; };
 		BB04CCC32AF179860082D38E /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		BB04CCC52AF179B10082D38E /* SettingsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDetailsViewController.swift; sourceTree = "<group>"; };
@@ -94,15 +123,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB03115C2AF29F8F00EE91B2 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				BB03115D2AF29F9A00EE91B2 /* Country.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		BB0311652AF2AEE400EE91B2 /* JsonData */ = {
+			isa = PBXGroup;
+			children = (
+				BB0311662AF2AF0400EE91B2 /* fighters.json */,
+				BB0311732AF2E24B00EE91B2 /* userData.json */,
+			);
+			path = JsonData;
+			sourceTree = "<group>";
+		};
 		BB04CCBF2AF16C230082D38E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BB03116D2AF2C65F00EE91B2 /* MainMenuViewController.swift */,
 				BB04CCC12AF16C5F0082D38E /* ResetPasswordConfirmationViewController.swift */,
 				BB8BA64E2AF041150080DFCC /* ResetPasswordViewController.swift */,
 				BB04CCC52AF179B10082D38E /* SettingsDetailsViewController.swift */,
 				BB04CCC32AF179860082D38E /* SettingsTableViewController.swift */,
 				BB8BA6502AF0414D0080DFCC /* SignUpViewController.swift */,
+				BB03115F2AF2A06300EE91B2 /* StreetFighterCharacterCollectionViewController.swift */,
 				BB8BA6202AF03BC70080DFCC /* ViewController.swift */,
+				BB0311712AF2DF0A00EE91B2 /* WebViewController.swift */,
+				BB0311772AF2E51A00EE91B2 /* UserTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -111,6 +161,11 @@
 			isa = PBXGroup;
 			children = (
 				BB04CCCA2AF17D220082D38E /* SettingTableViewCell.swift */,
+				BB03116F2AF2DBD200EE91B2 /* StreetFighterCollectionHeaderView.swift */,
+				BB0311672AF2C0A300EE91B2 /* StreetFighterCollectionViewCell.swift */,
+				BB0311682AF2C0A300EE91B2 /* StreetFighterCollectionViewCell.xib */,
+				BB0311792AF2E53100EE91B2 /* UserTableViewCell.swift */,
+				BB03117A2AF2E53100EE91B2 /* UserTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -119,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				BB04CCC82AF17AEE0082D38E /* SettingModel.swift */,
+				BB03115A2AF29EFB00EE91B2 /* StreetFighter.swift */,
+				BB0311752AF2E26100EE91B2 /* UserDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -128,6 +185,7 @@
 			children = (
 				BB623CB22AF095D6006DAF01 /* UIImage.swift */,
 				BB623CB42AF0A644006DAF01 /* UITextField.swift */,
+				BB03116B2AF2C11F00EE91B2 /* UIImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -155,6 +213,8 @@
 		BB8BA61B2AF03BC70080DFCC /* iOSBootcampUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				BB0311652AF2AEE400EE91B2 /* JsonData */,
+				BB03115C2AF29F8F00EE91B2 /* Enums */,
 				BB04CCC72AF17ADF0082D38E /* Models */,
 				BB04CCC02AF16C2B0082D38E /* Views */,
 				BB04CCBF2AF16C230082D38E /* Controllers */,
@@ -290,9 +350,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB0311742AF2E24B00EE91B2 /* userData.json in Resources */,
 				BB8BA6292AF03BC80080DFCC /* LaunchScreen.storyboard in Resources */,
 				BB8BA6262AF03BC80080DFCC /* Assets.xcassets in Resources */,
 				BB8BA6242AF03BC70080DFCC /* Main.storyboard in Resources */,
+				BB03117C2AF2E53100EE91B2 /* UserTableViewCell.xib in Resources */,
+				BB03116A2AF2C0A300EE91B2 /* StreetFighterCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,17 +380,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB03116E2AF2C65F00EE91B2 /* MainMenuViewController.swift in Sources */,
+				BB03117B2AF2E53100EE91B2 /* UserTableViewCell.swift in Sources */,
+				BB03115E2AF29F9A00EE91B2 /* Country.swift in Sources */,
 				BB04CCC92AF17AEE0082D38E /* SettingModel.swift in Sources */,
+				BB0311722AF2DF0A00EE91B2 /* WebViewController.swift in Sources */,
 				BB04CCC62AF179B10082D38E /* SettingsDetailsViewController.swift in Sources */,
 				BB8BA6212AF03BC70080DFCC /* ViewController.swift in Sources */,
 				BB8BA61D2AF03BC70080DFCC /* AppDelegate.swift in Sources */,
 				BB623CB52AF0A644006DAF01 /* UITextField.swift in Sources */,
+				BB0311782AF2E51A00EE91B2 /* UserTableViewController.swift in Sources */,
+				BB0311602AF2A06300EE91B2 /* StreetFighterCharacterCollectionViewController.swift in Sources */,
+				BB0311762AF2E26100EE91B2 /* UserDataModel.swift in Sources */,
+				BB0311692AF2C0A300EE91B2 /* StreetFighterCollectionViewCell.swift in Sources */,
 				BB8BA61F2AF03BC70080DFCC /* SceneDelegate.swift in Sources */,
+				BB03115B2AF29EFB00EE91B2 /* StreetFighter.swift in Sources */,
 				BB04CCCB2AF17D220082D38E /* SettingTableViewCell.swift in Sources */,
 				BB623CB32AF095D6006DAF01 /* UIImage.swift in Sources */,
 				BB8BA64F2AF041150080DFCC /* ResetPasswordViewController.swift in Sources */,
 				BB04CCC22AF16C5F0082D38E /* ResetPasswordConfirmationViewController.swift in Sources */,
 				BB8BA6512AF0414D0080DFCC /* SignUpViewController.swift in Sources */,
+				BB03116C2AF2C11F00EE91B2 /* UIImageView.swift in Sources */,
+				BB0311702AF2DBD200EE91B2 /* StreetFighterCollectionHeaderView.swift in Sources */,
 				BB04CCC42AF179870082D38E /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
