@@ -97,12 +97,12 @@
 		BB04CCBF2AF16C230082D38E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BB04CCC12AF16C5F0082D38E /* ResetPasswordConfirmationViewController.swift */,
 				BB8BA64E2AF041150080DFCC /* ResetPasswordViewController.swift */,
+				BB04CCC52AF179B10082D38E /* SettingsDetailsViewController.swift */,
+				BB04CCC32AF179860082D38E /* SettingsTableViewController.swift */,
 				BB8BA6502AF0414D0080DFCC /* SignUpViewController.swift */,
 				BB8BA6202AF03BC70080DFCC /* ViewController.swift */,
-				BB04CCC12AF16C5F0082D38E /* ResetPasswordConfirmationViewController.swift */,
-				BB04CCC32AF179860082D38E /* SettingsTableViewController.swift */,
-				BB04CCC52AF179B10082D38E /* SettingsDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

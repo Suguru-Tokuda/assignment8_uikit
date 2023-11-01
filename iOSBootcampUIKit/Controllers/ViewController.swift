@@ -8,7 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    private let scrollView: UIScrollView = {
+    // MARK: UIViews
+    private var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.isScrollEnabled = true
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -173,6 +174,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpUI()
+    }
+}
+
+// MARK: UI Setup
+extension ViewController {
+    private func setUpUI() {
         self.navigationController?.navigationBar.tintColor = .black
         
         // add event handler
@@ -216,7 +224,10 @@ class ViewController: UIViewController {
     private func setBtnFrame(button: inout UIButton) {
         button.frame = CGRect(x: 0, y: 0, width: view.frame.width - 50, height: 40)
     }
-    
+}
+
+// MARK: Constraints
+extension ViewController {
     func applyConstraints() {
         let scrollViewConstrants = [
             scrollView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -301,7 +312,10 @@ class ViewController: UIViewController {
         NSLayoutConstraint.activate(signInWithGoogleBtnConstraints)
         NSLayoutConstraint.activate(signUpDescriptionConstraints)
     }
-    
+}
+
+// MARK: Event handlers
+extension ViewController {
     @objc func handleSettingBtnTapped() {
         let vc = SettingsViewController()
         self.navigationController?.pushViewController(vc, animated: true)
@@ -314,7 +328,10 @@ class ViewController: UIViewController {
     @objc func handleSignUpBtnTapped() {
         self.performSegue(withIdentifier: "signUp", sender: nil)
     }
-    
+}
+
+// MARK: segue
+extension ViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "resetPassword":
@@ -330,4 +347,3 @@ class ViewController: UIViewController {
         }
     }
 }
-

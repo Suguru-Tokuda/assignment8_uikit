@@ -61,7 +61,10 @@ class ResetPasswordConfirmationViewController: UIViewController {
         super.viewDidLoad()
         setUpUI()
     }
-    
+}
+
+// MARK: UI Setup
+extension ResetPasswordConfirmationViewController {
     private func setUpUI() {
         screenLabel.frame = CGRect(x: 0, y: 0, width: view.frame.width * 0.4, height: 40.0)
         screenDescription.frame = CGRect(x: 0, y: 0, width: view.frame.width * 0.8, height: 40)
@@ -73,10 +76,12 @@ class ResetPasswordConfirmationViewController: UIViewController {
         view.addSubview(contentView)
         
         emailDisplayLabel.text = self.email ?? ""
-        
         applyConstraints()
     }
-    
+}
+
+// MARK: Constraints
+extension ResetPasswordConfirmationViewController {
     private func applyConstraints() {
         let contentViewConstraints = [
             contentView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
@@ -111,4 +116,5 @@ class ResetPasswordConfirmationViewController: UIViewController {
         NSLayoutConstraint.activate(emailLabelConstraints)
         NSLayoutConstraint.activate(emailDisplayLabelContraints)
     }
+
 }

@@ -43,6 +43,25 @@ class SettingTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setUpUI()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+}
+
+// MARK: UI functions
+extension SettingTableViewCell {
+    private func setUpUI() {
         contentView.addSubview(iconView)
         contentView.addSubview(settingLabel)
         contentView.addSubview(trailingArrowIcon)
@@ -51,10 +70,7 @@ class SettingTableViewCell: UITableViewCell {
         applyConstraints()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+    // MARK: set value
     func setValue(setting: SettingModel) {
         self.setting = setting
         
@@ -68,15 +84,10 @@ class SettingTableViewCell: UITableViewCell {
             settingLabel.text = setting.name
         }
     }
+}
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
+// MARK: Constriants
+extension SettingTableViewCell {
     private func applyConstraints() {
         let iconViewConstrants = [
             iconView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 30),

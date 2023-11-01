@@ -20,16 +20,23 @@ class SettingsDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-
-        settingLabel.text = settingTitle ?? ""
-        
-        view.addSubview(settingLabel)
-        
-        applyCostraints()
+        setUpUI()
     }
-    
-    func applyCostraints() {
+}
+
+// MARK: UI Setup
+extension SettingsDetailsViewController {
+    private func setUpUI() {
+        view.backgroundColor = .white
+        settingLabel.text = settingTitle ?? ""
+        view.addSubview(settingLabel)
+        applyConstraints()
+    }
+}
+
+// MARK: Constraints
+extension SettingsDetailsViewController {
+    private func applyConstraints() {
         let settingTitleConstraints = [
             settingLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             settingLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)

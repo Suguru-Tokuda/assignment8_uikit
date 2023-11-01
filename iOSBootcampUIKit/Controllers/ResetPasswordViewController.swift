@@ -8,7 +8,7 @@
 import UIKit
 
 class ResetPasswordViewController : UIViewController {
-    
+    // MARK: UI Properties
     private var emailTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "E-mail"
@@ -50,7 +50,14 @@ class ResetPasswordViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpUI()
         
+    }
+}
+
+// MARK: UI Setup
+extension ResetPasswordViewController {
+    private func setUpUI() {
         self.navigationItem.backBarButtonItem?.tintColor = .black
         emailTextField.addBottomLineToTextField(0.0, 40, view.frame.width - 50, 1.0)
         sendBtn.frame = CGRect(x: 0, y: 0, width: view.frame.width - 50, height: 40)
@@ -66,7 +73,10 @@ class ResetPasswordViewController : UIViewController {
         
         applyConstraints()
     }
-    
+}
+
+// MARK: Constraints
+extension ResetPasswordViewController {
     private func applyConstraints() {
         let emailTextFieldConstraints = [
             emailTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
@@ -98,7 +108,24 @@ class ResetPasswordViewController : UIViewController {
         NSLayoutConstraint.activate(errorMessageConstraints)
         NSLayoutConstraint.activate(viewDescriptionConstraints)
     }
-    
+}
+
+extension ResetPasswordViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ResetPasswordConfirmationViewControllerSegue" {
+            if let resetPasswordConfirmationVC = segue.destination as? ResetPasswordConfirmationViewController {
+                resetPasswordConfirmationVC.email = emailTextField.text ?? ""
+                
+                let backItem = UIBarButtonItem()
+                backItem.title = "Back to Reset Password"
+                navigationItem.backBarButtonItem = backItem
+            }
+        }
+    }
+}
+
+// MARK: Event handlers
+extension ResetPasswordViewController {
     @objc func emailTextFieldChanged() {
         if emailTextField.text?.isEmpty ?? false == false {
             errorMessageLabel.text = ""
@@ -116,18 +143,6 @@ class ResetPasswordViewController : UIViewController {
             errorMessageLabel.text = "Enter password"
             errorMessageLabel.isHidden = false
             errorMessageLabel.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 40)
-        }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ResetPasswordConfirmationViewControllerSegue" {
-            if let resetPasswordConfirmationVC = segue.destination as? ResetPasswordConfirmationViewController {
-                resetPasswordConfirmationVC.email = emailTextField.text ?? ""
-                
-                let backItem = UIBarButtonItem()
-                backItem.title = "Back to Reset Password"
-                navigationItem.backBarButtonItem = backItem                
-            }
         }
     }
 }
