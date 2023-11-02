@@ -10,7 +10,7 @@ import Foundation
 enum Country : String, CaseIterable {
     case japan = "Japan",
          china = "China",
-         hongKong = "HongKong",
+         hongKong = "Hong Kong",
          korea = "South Korea",
          us = "United States",
          uk = "United Kingdom",
@@ -29,7 +29,7 @@ enum Country : String, CaseIterable {
             return .japan
         case "china":
             return .china
-        case "hongkong":
+        case "hong kong":
             return .hongKong
         case "south korea":
             return .korea
