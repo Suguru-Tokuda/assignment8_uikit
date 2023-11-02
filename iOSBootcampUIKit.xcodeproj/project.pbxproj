@@ -26,6 +26,7 @@
 		BB04CCC62AF179B10082D38E /* SettingsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04CCC52AF179B10082D38E /* SettingsDetailsViewController.swift */; };
 		BB04CCC92AF17AEE0082D38E /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04CCC82AF17AEE0082D38E /* SettingModel.swift */; };
 		BB04CCCB2AF17D220082D38E /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04CCCA2AF17D220082D38E /* SettingTableViewCell.swift */; };
+		BB3703602AF3CCAF00CF4639 /* fighterData.json in Resources */ = {isa = PBXBuildFile; fileRef = BB37035F2AF3CCAF00CF4639 /* fighterData.json */; };
 		BB623CB32AF095D6006DAF01 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB623CB22AF095D6006DAF01 /* UIImage.swift */; };
 		BB623CB52AF0A644006DAF01 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB623CB42AF0A644006DAF01 /* UITextField.swift */; };
 		BB8BA61D2AF03BC70080DFCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8BA61C2AF03BC70080DFCC /* AppDelegate.swift */; };
@@ -62,7 +63,6 @@
 		BB03115A2AF29EFB00EE91B2 /* StreetFighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetFighter.swift; sourceTree = "<group>"; };
 		BB03115D2AF29F9A00EE91B2 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		BB03115F2AF2A06300EE91B2 /* StreetFighterCharacterCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetFighterCharacterCollectionViewController.swift; sourceTree = "<group>"; };
-		BB0311662AF2AF0400EE91B2 /* fighters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fighters.json; sourceTree = "<group>"; };
 		BB0311672AF2C0A300EE91B2 /* StreetFighterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetFighterCollectionViewCell.swift; sourceTree = "<group>"; };
 		BB0311682AF2C0A300EE91B2 /* StreetFighterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StreetFighterCollectionViewCell.xib; sourceTree = "<group>"; };
 		BB03116B2AF2C11F00EE91B2 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
@@ -79,6 +79,7 @@
 		BB04CCC52AF179B10082D38E /* SettingsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDetailsViewController.swift; sourceTree = "<group>"; };
 		BB04CCC82AF17AEE0082D38E /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		BB04CCCA2AF17D220082D38E /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		BB37035F2AF3CCAF00CF4639 /* fighterData.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = fighterData.json; sourceTree = "<group>"; };
 		BB623CB22AF095D6006DAF01 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		BB623CB42AF0A644006DAF01 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		BB8BA6192AF03BC70080DFCC /* iOSBootcampUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSBootcampUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,8 +135,8 @@
 		BB0311652AF2AEE400EE91B2 /* JsonData */ = {
 			isa = PBXGroup;
 			children = (
-				BB0311662AF2AF0400EE91B2 /* fighters.json */,
 				BB0311732AF2E24B00EE91B2 /* userData.json */,
+				BB37035F2AF3CCAF00CF4639 /* fighterData.json */,
 			);
 			path = JsonData;
 			sourceTree = "<group>";
@@ -355,6 +356,7 @@
 				BB8BA6262AF03BC80080DFCC /* Assets.xcassets in Resources */,
 				BB8BA6242AF03BC70080DFCC /* Main.storyboard in Resources */,
 				BB03117C2AF2E53100EE91B2 /* UserTableViewCell.xib in Resources */,
+				BB3703602AF3CCAF00CF4639 /* fighterData.json in Resources */,
 				BB03116A2AF2C0A300EE91B2 /* StreetFighterCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

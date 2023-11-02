@@ -9,27 +9,7 @@ import UIKit
 
 class StreetFighterCharacterCollectionViewController: UIViewController {
     var countries: [Country] = Country.allCases.sorted(by: { $0.rawValue < $1.rawValue })
-    let fighters: [StreetFighter] = [
-        StreetFighter(name: "Ryu", imageUrl: "https://www.streetfighter.com/6/assets/images/character/ryu/ryu.png", nationality: .japan, pageUrl: "https://www.streetfighter.com/6/character/ryu"),
-        StreetFighter(name: "Ken", imageUrl: "https://www.streetfighter.com/6/assets/images/character/ken/ken.png", nationality: .us, pageUrl: "https://www.streetfighter.com/6/character/ken"),
-        StreetFighter(name: "Guile", imageUrl: "https://www.streetfighter.com/6/assets/images/character/guile/guile.png", nationality: .us, pageUrl: "https://www.streetfighter.com/6/character/guile"),
-        StreetFighter(name: "A.K.I", imageUrl: "https://www.streetfighter.com/6/assets/images/character/aki/aki.png", nationality: .china, pageUrl: "https://www.streetfighter.com/6/character/aki"),
-        StreetFighter(name: "Rashid", imageUrl: "https://www.streetfighter.com/6/assets/images/character/rashid/rashid.png", nationality: .arab, pageUrl: "https://www.streetfighter.com/6/character/rashid"),
-        StreetFighter(name: "Cammy", imageUrl: "https://www.streetfighter.com/6/assets/images/character/cammy/cammy.png", nationality: .uk, pageUrl: "https://www.streetfighter.com/6/character/cammy"),
-        StreetFighter(name: "Lily", imageUrl: "https://www.streetfighter.com/6/assets/images/character/lily/lily.png", nationality: .mexico, pageUrl: "https://www.streetfighter.com/6/character/lily"),
-        StreetFighter(name: "JP", imageUrl: "https://www.streetfighter.com/6/assets/images/character/jp/jp.png", nationality: .russia, pageUrl: "https://www.streetfighter.com/6/character/jp"),
-        StreetFighter(name: "Marisa", imageUrl: "https://www.streetfighter.com/6/assets/images/character/marisa/marisa.png", nationality: .italy, pageUrl: "https://www.streetfighter.com/6/character/marisa"),
-        StreetFighter(name: "Zangief", imageUrl: "https://www.streetfighter.com/6/assets/images/character/zangief/zangief.png", nationality: .russia, pageUrl: "https://www.streetfighter.com/6/character/zangief"),
-        StreetFighter(name: "Manon", imageUrl: "https://www.streetfighter.com/6/assets/images/character/manon/manon.png", nationality: .france, pageUrl: "https://www.streetfighter.com/6/character/manon"),
-        StreetFighter(name: "Dee Jay", imageUrl: "https://www.streetfighter.com/6/assets/images/character/deejay/deejay.png", nationality: .jamaica, pageUrl: "https://www.streetfighter.com/6/character/deejay"),
-        StreetFighter(name: "E. Honda", imageUrl: "https://www.streetfighter.com/6/assets/images/character/ehonda/ehonda.png", nationality: .japan, pageUrl: "https://www.streetfighter.com/6/character/ehonda"),
-        StreetFighter(name: "Dhalsim", imageUrl: "https://www.streetfighter.com/6/assets/images/character/dhalsim/dhalsim.png", nationality: .india, pageUrl: "https://www.streetfighter.com/6/character/dhalsim"),
-        StreetFighter(name: "Blanka", imageUrl: "https://www.streetfighter.com/6/assets/images/character/blanka/blanka.png", nationality: .brazil, pageUrl: "https://www.streetfighter.com/6/character/blanka"),
-        StreetFighter(name: "Juri", imageUrl: "https://www.streetfighter.com/6/assets/images/character/juri/juri.png", nationality: .korea, pageUrl: "https://www.streetfighter.com/6/character/juri"),
-        StreetFighter(name: "Chun-Li", imageUrl: "https://www.streetfighter.com/6/assets/images/character/chunli/chunli.png", nationality: .china, pageUrl: "https://www.streetfighter.com/6/character/chunli"),
-        StreetFighter(name: "Jamie", imageUrl: "https://www.streetfighter.com/6/assets/images/character/jamie/jamie.png", nationality: .hongKong, pageUrl: "https://www.streetfighter.com/6/character/jamie"),
-        StreetFighter(name: "Luke", imageUrl: "https://www.streetfighter.com/6/assets/images/character/luke/luke.png", nationality: .us, pageUrl: "https://www.streetfighter.com/6/character/luke"),
-    ]
+    var fighters: [StreetFighter] = []
     var fightersDict: [Country : [StreetFighter]] = [:]
     
     private var collectionView: UICollectionView = {
@@ -55,11 +35,6 @@ class StreetFighterCharacterCollectionViewController: UIViewController {
 
 extension StreetFighterCharacterCollectionViewController {
     private func setUpUI() {
-        for country in countries {
-            let fighters = self.fighters.filter { $0.nationality == country }.sorted(by: { $0.name < $1.name })
-            self.fightersDict[country] = fighters
-        }
-        
         let cellXib = UINib(nibName: "StreetFighterCollectionViewCell", bundle: nil)
         collectionView.register(cellXib, forCellWithReuseIdentifier: "StreetFighterCollectionViewCell")
         collectionView.register(StreetFighterCollectionHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: StreetFighterCollectionHeaderView.identifier)
@@ -68,6 +43,36 @@ extension StreetFighterCharacterCollectionViewController {
         
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        loadStreetFightersFromJson()
+    }
+}
+
+extension StreetFighterCharacterCollectionViewController {
+    private func loadStreetFightersFromJson() {
+        let bundle = Bundle(for: StreetFighterCharacterCollectionViewController.self)
+        let url = bundle.url(forResource: "fighterData", withExtension: "json")
+        guard let url = url else { return }
+        
+        DispatchQueue.global(qos: .utility).async {
+            do {
+                let rawData = try Data(contentsOf: url)
+                let fighterData: [StreetFighter] = try JSONDecoder().decode([StreetFighter].self, from: rawData)
+
+                DispatchQueue.main.async { [weak self] in
+                    self?.fighters = fighterData
+                    if let countries = self?.countries {
+                        for country in countries {
+                            let fighters = self?.fighters.filter { $0.nationality == country }.sorted(by: { $0.name < $1.name })
+                            self?.fightersDict[country] = fighters
+                        }
+                    }
+                    self?.collectionView.reloadData()
+                }
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
 }
 
