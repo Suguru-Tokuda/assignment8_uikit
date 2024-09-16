@@ -55,10 +55,29 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Dwn-tv-Jhh"/>
+                    <connections>
+                        <segue destination="d72-TG-VHm" kind="show" identifier="ResetPasswordConfirmationViewControllerSegue" id="TNt-YC-quS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0pG-rI-RZf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1755" y="-956"/>
+        </scene>
+        <!--Reset Password Confirmation View Controller-->
+        <scene sceneID="Do7-N2-aAN">
+            <objects>
+                <viewController storyboardIdentifier="ResetPasswordConfirmationViewController" id="d72-TG-VHm" customClass="ResetPasswordConfirmationViewController" customModule="Assignment8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0pP-dT-1ak">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Cxf-Xw-ocP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Oyj-Qa-C31"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AGD-rc-tvm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2721" y="-962"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QLU-aF-n1J">

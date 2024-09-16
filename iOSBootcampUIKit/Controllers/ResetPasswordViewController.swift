@@ -8,7 +8,7 @@
 import UIKit
 
 class ResetPasswordViewController : UIViewController {
-    
+    // MARK: UI Properties
     private var emailTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "E-mail"
@@ -39,9 +39,25 @@ class ResetPasswordViewController : UIViewController {
         return label
     }()
     
+    private var errorMessageLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 14, weight: .bold)
+        label.textColor = .red
+        label.isHidden = true
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpUI()
         
+    }
+}
+
+// MARK: UI Setup
+extension ResetPasswordViewController {
+    private func setUpUI() {
         self.navigationItem.backBarButtonItem?.tintColor = .black
         emailTextField.addBottomLineToTextField(0.0, 40, view.frame.width - 50, 1.0)
         sendBtn.frame = CGRect(x: 0, y: 0, width: view.frame.width - 50, height: 40)
@@ -49,11 +65,18 @@ class ResetPasswordViewController : UIViewController {
         
         view.addSubview(emailTextField)
         view.addSubview(sendBtn)
+        view.addSubview(errorMessageLabel)
         view.addSubview(viewDescription)
+        
+        sendBtn.addTarget(self, action: #selector(sendBtnTapped), for: .touchUpInside)
+        emailTextField.addTarget(self, action: #selector(emailTextFieldChanged), for: .editingChanged)
         
         applyConstraints()
     }
-    
+}
+
+// MARK: Constraints
+extension ResetPasswordViewController {
     private func applyConstraints() {
         let emailTextFieldConstraints = [
             emailTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
@@ -68,15 +91,58 @@ class ResetPasswordViewController : UIViewController {
             sendBtn.heightAnchor.constraint(equalToConstant: 40)
         ]
         
+        let errorMessageConstraints = [
+            errorMessageLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+            errorMessageLabel.topAnchor.constraint(equalTo: sendBtn.bottomAnchor, constant: 25)
+        ]
+        
         let viewDescriptionConstraints = [
             viewDescription.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-            viewDescription.topAnchor.constraint(equalTo: sendBtn.bottomAnchor, constant: 10),
+            viewDescription.topAnchor.constraint(equalTo: errorMessageLabel.bottomAnchor, constant: 10),
             viewDescription.heightAnchor.constraint(equalToConstant: 40)
         ]
         
         
         NSLayoutConstraint.activate(emailTextFieldConstraints)
         NSLayoutConstraint.activate(sendBtnConstraints)
+        NSLayoutConstraint.activate(errorMessageConstraints)
         NSLayoutConstraint.activate(viewDescriptionConstraints)
+    }
+}
+
+extension ResetPasswordViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ResetPasswordConfirmationViewControllerSegue" {
+            if let resetPasswordConfirmationVC = segue.destination as? ResetPasswordConfirmationViewController {
+                resetPasswordConfirmationVC.email = emailTextField.text ?? ""
+                
+                let backItem = UIBarButtonItem()
+                backItem.title = "Back to Reset Password"
+                navigationItem.backBarButtonItem = backItem
+            }
+        }
+    }
+}
+
+// MARK: Event handlers
+extension ResetPasswordViewController {
+    @objc func emailTextFieldChanged() {
+        if emailTextField.text?.isEmpty ?? false == false {
+            errorMessageLabel.text = ""
+            errorMessageLabel.isHidden = true
+            errorMessageLabel.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+        }
+    }
+    
+    @objc func sendBtnTapped() {
+        if let emailText = emailTextField.text,
+               emailText.isEmpty == false {
+            self.performSegue(withIdentifier: "ResetPasswordConfirmationViewControllerSegue", sender: self)
+
+        } else {
+            errorMessageLabel.text = "Enter password"
+            errorMessageLabel.isHidden = false
+            errorMessageLabel.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 40)
+        }
     }
 }

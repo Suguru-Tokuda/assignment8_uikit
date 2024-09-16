@@ -8,6 +8,7 @@
 import UIKit
 
 class SignUpViewController : UIViewController {
+    // MARK: UIViews
     private var emailTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "E-mail"
@@ -78,6 +79,13 @@ class SignUpViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpUI()
+    }
+}
+
+// MARK: UI Setup
+extension SignUpViewController {
+    private func setUpUI() {
         emailTextField.addBottomLineToTextField(0.0, 40, view.frame.width - 50, 1.0)
         passwordTextField.addBottomLineToTextField(0.0, 40, view.frame.width - 50, 1.0)
         resetPasswordTextField.addBottomLineToTextField(0.0, 40, view.frame.width - 50, 1.0)
@@ -91,7 +99,10 @@ class SignUpViewController : UIViewController {
                 
         applyConstraints()
     }
-    
+}
+
+// MARK: Constraints
+extension SignUpViewController {
     private func applyConstraints() {
         let emailTextFieldConstraints = [
             emailTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
